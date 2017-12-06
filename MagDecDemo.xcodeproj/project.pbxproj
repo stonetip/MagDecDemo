@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80D65F731FD8733B00F1D84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D65F721FD8733B00F1D84A /* AppDelegate.swift */; };
+		80D65F751FD8733B00F1D84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D65F741FD8733B00F1D84A /* ViewController.swift */; };
+		80D65F781FD8733B00F1D84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D65F761FD8733B00F1D84A /* Main.storyboard */; };
+		80D65F7A1FD8733B00F1D84A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D65F791FD8733B00F1D84A /* Assets.xcassets */; };
+		80D65F7D1FD8733B00F1D84A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D65F7B1FD8733B00F1D84A /* LaunchScreen.storyboard */; };
+		80D65F881FD8733B00F1D84A /* MagDecDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D65F871FD8733B00F1D84A /* MagDecDemoTests.swift */; };
+		80D65F931FD8733B00F1D84A /* MagDecDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D65F921FD8733B00F1D84A /* MagDecDemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80D65F841FD8733B00F1D84A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80D65F671FD8733B00F1D84A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80D65F6E1FD8733B00F1D84A;
+			remoteInfo = MagDecDemo;
+		};
+		80D65F8F1FD8733B00F1D84A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80D65F671FD8733B00F1D84A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80D65F6E1FD8733B00F1D84A;
+			remoteInfo = MagDecDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80D65F6F1FD8733B00F1D84A /* MagDecDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagDecDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D65F721FD8733B00F1D84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80D65F741FD8733B00F1D84A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80D65F771FD8733B00F1D84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80D65F791FD8733B00F1D84A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80D65F7C1FD8733B00F1D84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		80D65F7E1FD8733B00F1D84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80D65F831FD8733B00F1D84A /* MagDecDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagDecDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D65F871FD8733B00F1D84A /* MagDecDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagDecDemoTests.swift; sourceTree = "<group>"; };
+		80D65F891FD8733B00F1D84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80D65F8E1FD8733B00F1D84A /* MagDecDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagDecDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D65F921FD8733B00F1D84A /* MagDecDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagDecDemoUITests.swift; sourceTree = "<group>"; };
+		80D65F941FD8733B00F1D84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80D65F6C1FD8733B00F1D84A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D65F801FD8733B00F1D84A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D65F8B1FD8733B00F1D84A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80D65F661FD8733B00F1D84A = {
+			isa = PBXGroup;
+			children = (
+				80D65F711FD8733B00F1D84A /* MagDecDemo */,
+				80D65F861FD8733B00F1D84A /* MagDecDemoTests */,
+				80D65F911FD8733B00F1D84A /* MagDecDemoUITests */,
+				80D65F701FD8733B00F1D84A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80D65F701FD8733B00F1D84A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80D65F6F1FD8733B00F1D84A /* MagDecDemo.app */,
+				80D65F831FD8733B00F1D84A /* MagDecDemoTests.xctest */,
+				80D65F8E1FD8733B00F1D84A /* MagDecDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80D65F711FD8733B00F1D84A /* MagDecDemo */ = {
+			isa = PBXGroup;
+			children = (
+				80D65F721FD8733B00F1D84A /* AppDelegate.swift */,
+				80D65F741FD8733B00F1D84A /* ViewController.swift */,
+				80D65F761FD8733B00F1D84A /* Main.storyboard */,
+				80D65F791FD8733B00F1D84A /* Assets.xcassets */,
+				80D65F7B1FD8733B00F1D84A /* LaunchScreen.storyboard */,
+				80D65F7E1FD8733B00F1D84A /* Info.plist */,
+			);
+			path = MagDecDemo;
+			sourceTree = "<group>";
+		};
+		80D65F861FD8733B00F1D84A /* MagDecDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				80D65F871FD8733B00F1D84A /* MagDecDemoTests.swift */,
+				80D65F891FD8733B00F1D84A /* Info.plist */,
+			);
+			path = MagDecDemoTests;
+			sourceTree = "<group>";
+		};
+		80D65F911FD8733B00F1D84A /* MagDecDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				80D65F921FD8733B00F1D84A /* MagDecDemoUITests.swift */,
+				80D65F941FD8733B00F1D84A /* Info.plist */,
+			);
+			path = MagDecDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80D65F6E1FD8733B00F1D84A /* MagDecDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80D65F971FD8733B00F1D84A /* Build configuration list for PBXNativeTarget "MagDecDemo" */;
+			buildPhases = (
+				80D65F6B1FD8733B00F1D84A /* Sources */,
+				80D65F6C1FD8733B00F1D84A /* Frameworks */,
+				80D65F6D1FD8733B00F1D84A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagDecDemo;
+			productName = MagDecDemo;
+			productReference = 80D65F6F1FD8733B00F1D84A /* MagDecDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80D65F821FD8733B00F1D84A /* MagDecDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80D65F9A1FD8733B00F1D84A /* Build configuration list for PBXNativeTarget "MagDecDemoTests" */;
+			buildPhases = (
+				80D65F7F1FD8733B00F1D84A /* Sources */,
+				80D65F801FD8733B00F1D84A /* Frameworks */,
+				80D65F811FD8733B00F1D84A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80D65F851FD8733B00F1D84A /* PBXTargetDependency */,
+			);
+			name = MagDecDemoTests;
+			productName = MagDecDemoTests;
+			productReference = 80D65F831FD8733B00F1D84A /* MagDecDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		80D65F8D1FD8733B00F1D84A /* MagDecDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80D65F9D1FD8733B00F1D84A /* Build configuration list for PBXNativeTarget "MagDecDemoUITests" */;
+			buildPhases = (
+				80D65F8A1FD8733B00F1D84A /* Sources */,
+				80D65F8B1FD8733B00F1D84A /* Frameworks */,
+				80D65F8C1FD8733B00F1D84A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80D65F901FD8733B00F1D84A /* PBXTargetDependency */,
+			);
+			name = MagDecDemoUITests;
+			productName = MagDecDemoUITests;
+			productReference = 80D65F8E1FD8733B00F1D84A /* MagDecDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80D65F671FD8733B00F1D84A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Jonathan Nehring";
+				TargetAttributes = {
+					80D65F6E1FD8733B00F1D84A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					80D65F821FD8733B00F1D84A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 80D65F6E1FD8733B00F1D84A;
+					};
+					80D65F8D1FD8733B00F1D84A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 80D65F6E1FD8733B00F1D84A;
+					};
+				};
+			};
+			buildConfigurationList = 80D65F6A1FD8733B00F1D84A /* Build configuration list for PBXProject "MagDecDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80D65F661FD8733B00F1D84A;
+			productRefGroup = 80D65F701FD8733B00F1D84A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80D65F6E1FD8733B00F1D84A /* MagDecDemo */,
+				80D65F821FD8733B00F1D84A /* MagDecDemoTests */,
+				80D65F8D1FD8733B00F1D84A /* MagDecDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80D65F6D1FD8733B00F1D84A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D65F7D1FD8733B00F1D84A /* LaunchScreen.storyboard in Resources */,
+				80D65F7A1FD8733B00F1D84A /* Assets.xcassets in Resources */,
+				80D65F781FD8733B00F1D84A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D65F811FD8733B00F1D84A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D65F8C1FD8733B00F1D84A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80D65F6B1FD8733B00F1D84A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D65F751FD8733B00F1D84A /* ViewController.swift in Sources */,
+				80D65F731FD8733B00F1D84A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D65F7F1FD8733B00F1D84A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D65F881FD8733B00F1D84A /* MagDecDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D65F8A1FD8733B00F1D84A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D65F931FD8733B00F1D84A /* MagDecDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80D65F851FD8733B00F1D84A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80D65F6E1FD8733B00F1D84A /* MagDecDemo */;
+			targetProxy = 80D65F841FD8733B00F1D84A /* PBXContainerItemProxy */;
+		};
+		80D65F901FD8733B00F1D84A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80D65F6E1FD8733B00F1D84A /* MagDecDemo */;
+			targetProxy = 80D65F8F1FD8733B00F1D84A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80D65F761FD8733B00F1D84A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80D65F771FD8733B00F1D84A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80D65F7B1FD8733B00F1D84A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80D65F7C1FD8733B00F1D84A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80D65F951FD8733B00F1D84A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80D65F961FD8733B00F1D84A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80D65F981FD8733B00F1D84A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y538M6FTBL;
+				INFOPLIST_FILE = MagDecDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stonetip.MagDecDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80D65F991FD8733B00F1D84A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y538M6FTBL;
+				INFOPLIST_FILE = MagDecDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stonetip.MagDecDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		80D65F9B1FD8733B00F1D84A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y538M6FTBL;
+				INFOPLIST_FILE = MagDecDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stonetip.MagDecDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagDecDemo.app/MagDecDemo";
+			};
+			name = Debug;
+		};
+		80D65F9C1FD8733B00F1D84A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y538M6FTBL;
+				INFOPLIST_FILE = MagDecDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stonetip.MagDecDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagDecDemo.app/MagDecDemo";
+			};
+			name = Release;
+		};
+		80D65F9E1FD8733B00F1D84A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y538M6FTBL;
+				INFOPLIST_FILE = MagDecDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stonetip.MagDecDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MagDecDemo;
+			};
+			name = Debug;
+		};
+		80D65F9F1FD8733B00F1D84A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y538M6FTBL;
+				INFOPLIST_FILE = MagDecDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stonetip.MagDecDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MagDecDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80D65F6A1FD8733B00F1D84A /* Build configuration list for PBXProject "MagDecDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D65F951FD8733B00F1D84A /* Debug */,
+				80D65F961FD8733B00F1D84A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80D65F971FD8733B00F1D84A /* Build configuration list for PBXNativeTarget "MagDecDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D65F981FD8733B00F1D84A /* Debug */,
+				80D65F991FD8733B00F1D84A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80D65F9A1FD8733B00F1D84A /* Build configuration list for PBXNativeTarget "MagDecDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D65F9B1FD8733B00F1D84A /* Debug */,
+				80D65F9C1FD8733B00F1D84A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80D65F9D1FD8733B00F1D84A /* Build configuration list for PBXNativeTarget "MagDecDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D65F9E1FD8733B00F1D84A /* Debug */,
+				80D65F9F1FD8733B00F1D84A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80D65F671FD8733B00F1D84A /* Project object */;
+}
