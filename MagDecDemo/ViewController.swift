@@ -5,45 +5,53 @@ import UIKit
 
 
 class ViewController: UIViewController  {
-
-
     
-    let urlString: String = "https://magdecazex1.azurewebsites.net/dec?lat=29&lon=-101.2"
+    
+    
+    let urlString: String = "https://magdecazex1.azurewebsites.net/dec"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     
-        guard let url = URL(string: urlString) else { return }
+        let compositeUrl = NSURLComponents(string: urlString)
+        
+        let lat = 46.6;
+        let lon = -112.1
+        
+        let params = [NSURLQueryItem(name: "lat", value: "\(lat)" ), NSURLQueryItem(name: "lon", value: "\(lon)" )]
+        
+        compositeUrl?.queryItems = params as [URLQueryItem]
+        
+        guard let url = compositeUrl?.url else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            }
+                if error != nil {
+                    print(error!.localizedDescription)
+                }
             
-            guard let data = data else { return }
-            //Implement JSON decoding and parsing
-           
-                //Decode retrived data with JSONDecoder and assing type of Article object
+                guard let data = data else { return }
+
                 let decData = DecInfo.from(data: data)!
-                
-                //Get back to the main queue
+
                 DispatchQueue.main.async {
                     print(decData)
                 }
-                
+            
             }.resume()
-        
-        
-        var bar: String = "ok"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
+
+
+
+
+
+
 
 
 struct DecInfo: Codable {
@@ -65,7 +73,7 @@ extension DecInfo {
         return try? decoder.decode(DecInfo.self, from: data)
     }
     
-
+    
     var jsonData: Data? {
         let encoder = JSONEncoder()
         return try? encoder.encode(self)
