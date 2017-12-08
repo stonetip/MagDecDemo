@@ -1,0 +1,3 @@
+[submodule "MagDecDemo/Libraries/siesta"]
+	path = MagDecDemo/Libraries/siesta
+	url = https://github.com/bustoutsolutions/siesta.git
