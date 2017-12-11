@@ -14,8 +14,8 @@ class ViewController: UIViewController  {
         
       //  let compositeUrl = NSURLComponents(string: urlString)
         
-        let lat = 47.6;
-        let lon = -110.1
+        let lat = 37.6;
+        let lon = -111.1
         
         // local storage
         let defaults = UserDefaults.standard
@@ -28,7 +28,7 @@ class ViewController: UIViewController  {
             
             // TODO - Compare retrieved lat/lon to current lat/lon via Haversine Distance to
             // see if a new value needs to be gotten from the Magnetic Declination service.
-            let distance = haversineDistance(la1: lat, lo1: lon, la2: retrievedDecData.lat, lo2: retrievedDecData.lon)
+            let distance = haversineDistance(lat1: lat, lon1: lon, lat2: retrievedDecData.lat, lon2: retrievedDecData.lon)
             
             print("distance: \(distance)")
             if(distance > 55000)

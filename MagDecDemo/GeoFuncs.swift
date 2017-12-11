@@ -8,32 +8,28 @@
 
 import Foundation
 
-/**
- - Parameters:
- - cubes: The cubes available for allocation
- - people: The people that require cubes
- */
-func haversineDistance(la1: Double, lo1: Double, la2: Double, lo2: Double) -> Double {
-    
-    let radius: Double = 6367444.7
-    
-    let haversine = { (angle: Double) -> Double in
-        return (1 - cos(angle))/2
-    }
-    
-    let ahaversine = { (angle: Double) -> Double in
-        return 2*asin(sqrt(angle))
-    }
+
+func haversineDistance(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -> Double {
     
     // Converts from degrees to radians
-    let dToR = { (angle: Double) -> Double in
-        return (angle / 360) * 2 * Double.pi
+    let degToRad = { (degrees: Double) -> Double in
+        return degrees * .pi / 180
     }
     
-    let lat1 = dToR(la1)
-    let lon1 = dToR(lo1)
-    let lat2 = dToR(la2)
-    let lon2 = dToR(lo2)
+    let R: Double = 6371e3; // meters
     
-    return radius * ahaversine(haversine(lat2 - lat1) + cos(lat1) * cos(lat2) * haversine(lon2 - lon1))
+    let lat1Rad: Double = degToRad(lat1);
+    let lat2Rad: Double = degToRad(lat2);
+    let deltaLat: Double = degToRad(lat2 - lat1);
+    let deltaLon: Double = degToRad(lon2 - lon1);
+    
+    let a = sin(deltaLat / 2) * sin(deltaLat / 2) +
+            cos(lat1Rad) *
+            cos(lat2Rad) *
+            sin(deltaLon / 2) *
+            sin(deltaLon / 2)
+    
+    let c = 2 * atan2(sqrt(a), sqrt(1 - a))
+    
+    return R * c
 }
