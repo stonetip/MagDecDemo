@@ -2,42 +2,110 @@
 import UIKit
 
 
-
-
 class ViewController: UIViewController  {
     
-    
-    
     let urlString: String = "https://magdecazex1.azurewebsites.net/dec"
+    
+    var masterDecInfo = DecInfo( dec: 0.0, lat: 0.0, lon: 0.0)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let compositeUrl = NSURLComponents(string: urlString)
+      //  let compositeUrl = NSURLComponents(string: urlString)
         
-        let lat = 46.6;
-        let lon = -112.1
+        let lat = 47.6;
+        let lon = -110.1
         
-        let params = [NSURLQueryItem(name: "lat", value: "\(lat)" ), NSURLQueryItem(name: "lon", value: "\(lon)" )]
+        // local storage
+        let defaults = UserDefaults.standard
         
-        compositeUrl?.queryItems = params as [URLQueryItem]
-        
-        guard let url = compositeUrl?.url else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if error != nil {
-                    print(error!.localizedDescription)
-                }
+        if let storedDecData = defaults.value(forKey:"decData") as? Data {
             
-                guard let data = data else { return }
-
-                let decData = DecInfo.from(data: data)!
-
-                DispatchQueue.main.async {
-                    print(decData)
-                }
+            let retrievedDecData = try! PropertyListDecoder().decode(DecInfo.self, from: storedDecData)
             
-            }.resume()
+            print("retrievedDecData: \(retrievedDecData)")
+            
+            // TODO - Compare retrieved lat/lon to current lat/lon via Haversine Distance to
+            // see if a new value needs to be gotten from the Magnetic Declination service.
+            let distance = haversineDistance(la1: lat, lo1: lon, la2: retrievedDecData.lat, lo2: retrievedDecData.lon)
+            
+            print("distance: \(distance)")
+            if(distance > 55000)
+            {
+                let dData = GetDecData()
+                
+                dData.GetDecDataFromSvc(urlString: urlString, lat: lat, lon: lon){
+                    
+                    decData in
+                    
+                    print("dd: \(decData)")
+                    
+                    self.masterDecInfo = decData
+                    
+                    print("mdi: \(self.masterDecInfo)")
+                    
+                    defaults.set(try? PropertyListEncoder().encode(decData), forKey: "decData")
+                }
+            }
+        }
+        else {
+            
+            let dData = GetDecData()
+            
+            dData.GetDecDataFromSvc(urlString: urlString, lat: lat, lon: lon){
+                
+                decData in
+                
+                print("dd: \(decData)")
+                
+                self.masterDecInfo = decData
+                
+                print("mdi: \(self.masterDecInfo)")
+                
+                defaults.set(try? PropertyListEncoder().encode(decData), forKey: "decData")
+            }
+        }
+        
+        
+
+        
+        // Want to get rid of this
+        //        let params = [NSURLQueryItem(name: "lat", value: "\(lat)" ), NSURLQueryItem(name: "lon", value: "\(lon)" )]
+        //
+        //        compositeUrl?.queryItems = params as [URLQueryItem]
+        //
+        //        guard let url = compositeUrl?.url else { return }
+        //
+        //        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        //            if error != nil {
+        //                print(error!.localizedDescription)
+        //            }
+        //
+        //            guard let data = data else { return }
+        //
+        //            let decData = DecInfo.from(data: data)!
+        //
+        //            DispatchQueue.main.async {
+        //                print(decData)
+        //
+        //                // local storage
+        //                let defaults = UserDefaults.standard
+        //
+        //                defaults.set(try? PropertyListEncoder().encode(decData), forKey: "decData")
+        //
+        //                if let storedDecData = defaults.value(forKey:"decData") as? Data {
+        //
+        //                    let retrievedDecData = try! PropertyListDecoder().decode(DecInfo.self, from: storedDecData)
+        //
+        //                    print(retrievedDecData)
+        //
+        //                    // TODO - Compare retrieved lat/lon to current lat/lon via Haversine Distance to
+        //                    // see if a new value needs to be gotten from the Magnetic Declination service.
+        //                }
+        //            }
+        //
+        //            }.resume()
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,8 +116,43 @@ class ViewController: UIViewController  {
 }
 
 
-
-
+/* NOTE: This needs to be refactored and restructured so that a local/Haversine check is made first. A call to the magdecsv should
+ only be made if either:
+ 
+ 1) There is no value stored locally
+ 2) The local value is invalid (determined after checking distance from current location to stored location - threshold exceeded)
+ 
+ */
+class GetDecData{
+    
+    
+    func GetDecDataFromSvc(urlString: String, lat: Double, lon: Double, completion: @escaping (DecInfo) -> ()) {
+        
+        var decData = DecInfo( dec: 0.0, lat: 0.0, lon: 0.0)
+        
+        let compositeUrl = NSURLComponents(string: urlString)
+        
+        let params = [NSURLQueryItem(name: "lat", value: "\(lat)" ), NSURLQueryItem(name: "lon", value: "\(lon)" )]
+        
+        compositeUrl?.queryItems = params as [URLQueryItem]
+        
+        guard let url = compositeUrl?.url else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            guard let data = data else { return }
+            
+            decData = DecInfo.from(data: data)!
+            
+            completion(decData)
+            
+            }.resume()
+        
+    }
+}
 
 
 
