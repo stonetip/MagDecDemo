@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		80B970061FDF25F500EB1486 /* GeoFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B970051FDF25F500EB1486 /* GeoFuncs.swift */; };
+		80B970081FE0312300EB1486 /* DecInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B970071FE0312300EB1486 /* DecInfo.swift */; };
 		80D65F731FD8733B00F1D84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D65F721FD8733B00F1D84A /* AppDelegate.swift */; };
 		80D65F751FD8733B00F1D84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D65F741FD8733B00F1D84A /* ViewController.swift */; };
 		80D65F781FD8733B00F1D84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D65F761FD8733B00F1D84A /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		80B970051FDF25F500EB1486 /* GeoFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoFuncs.swift; sourceTree = "<group>"; };
+		80B970071FE0312300EB1486 /* DecInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecInfo.swift; sourceTree = "<group>"; };
 		80D65F6F1FD8733B00F1D84A /* MagDecDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagDecDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D65F721FD8733B00F1D84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80D65F741FD8733B00F1D84A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				80D65F7B1FD8733B00F1D84A /* LaunchScreen.storyboard */,
 				80D65F7E1FD8733B00F1D84A /* Info.plist */,
 				80B970051FDF25F500EB1486 /* GeoFuncs.swift */,
+				80B970071FE0312300EB1486 /* DecInfo.swift */,
 			);
 			path = MagDecDemo;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B970081FE0312300EB1486 /* DecInfo.swift in Sources */,
 				80D65F751FD8733B00F1D84A /* ViewController.swift in Sources */,
 				80D65F731FD8733B00F1D84A /* AppDelegate.swift in Sources */,
 				80B970061FDF25F500EB1486 /* GeoFuncs.swift in Sources */,
