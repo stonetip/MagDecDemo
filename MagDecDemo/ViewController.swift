@@ -7,8 +7,7 @@ class ViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        CheckDecData(lat: 46.6, lon: -109.3)
-        
+        CheckDecData(lat: 46.6, lon: -111.3)
         
     }
     
@@ -18,12 +17,3 @@ class ViewController: UIViewController  {
     }
     
 }
-
-
-
-
-
-
-
-
-

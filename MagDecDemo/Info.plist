@@ -36,6 +36,8 @@
 	</array>
 	<key>DeclinationSvcUrl</key>
 	<string>https://magdecazex1.azurewebsites.net/dec</string>
+	<key>MaxDistance</key>
+	<integer>55000</integer>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -50,8 +50,12 @@ public func CheckDecData(lat: Double, lon: Double)
         
         print("distance: \(distance)")
         
-        if(distance < 55000){
-            return
+        if let maxDistance: Double = (Bundle.main.object(forInfoDictionaryKey: "MaxDistance") as? Double)
+        {
+            // If distance is within tolerance no need to update declination values
+            if(distance < maxDistance){
+                return
+            }
         }
     }
     
@@ -68,7 +72,6 @@ public func CheckDecData(lat: Double, lon: Double)
 
 
 public class DecDataSvc{
-    
     
     func GetDecDataFromSvc(lat: Double, lon: Double, completion: @escaping (DecInfo) -> ()) {
         
@@ -99,9 +102,6 @@ public class DecDataSvc{
             completion(decData)
             
             }.resume()
-        
-        
-        
     }
 }
 
