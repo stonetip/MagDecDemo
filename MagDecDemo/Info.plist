@@ -18,15 +18,23 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>DeclinationSvcUrl</key>
+	<string>https://magdecazex1.azurewebsites.net/dec</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MaxDistance</key>
+	<integer>55000</integer>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow location services for data</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-		<string>armv7</string>
+		<string>location-services</string>
+		<string>gps</string>
+		<string>arm64</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
@@ -34,10 +42,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>DeclinationSvcUrl</key>
-	<string>https://magdecazex1.azurewebsites.net/dec</string>
-	<key>MaxDistance</key>
-	<integer>55000</integer>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
