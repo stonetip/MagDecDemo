@@ -80,9 +80,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.updating = false
         
         lblLatValue.text = String(format: "%.1f", 0)
-        lblLonValue.text = String(format: "%.6f", 0)
-        lblDeclValue.text = String(format: "%.6f", 0)
-        lblDegValue.text = String(format: "%.f", 0)
+        lblLonValue.text = String(format: "%.1f", 0)
+        lblDeclValue.text = String(format: "%.1f", 0)
+        lblDegValue.text = String(format: "%.1f", 0)
         
     }
     
@@ -110,7 +110,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         let course = location.course
         
-        lblCourseValue.text = String(format: "%.1f", course)
+        lblCourseValue.text = String(format: "%.2f", course)
     }
     
     // heading
@@ -118,7 +118,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         let headingAccuracy = newHeading.headingAccuracy
         
-        lblHeadingAccuracyValue.text = String(format: "%.6f", headingAccuracy)
+        lblHeadingAccuracyValue.text = String(format: "%.1f", headingAccuracy)
         
         let currentHeading = newHeading.magneticHeading
         
@@ -133,17 +133,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 currentHeadingAdj = currentHeadingAdj - 360
             }
             
-            lblDegValue.text = String(format: "%.1f", currentHeadingAdj)
-            lblDeclValue.text = String(format: "%.1f", retrievedDecData.dec)
+            lblDegValue.text = String(format: "%.2f", currentHeadingAdj)
+            lblDeclValue.text = String(format: "%.2f", retrievedDecData.dec)
         }
         else{
             
-            lblDegValue.text = String(format: "%.1f", currentHeading)
+            lblDegValue.text = String(format: "%.2f", currentHeading)
             lblDeclValue.text = "---"
         }
         
         let trueHeading = newHeading.trueHeading
 
-        lblTrueNorthValue.text = String(format: "%.1f", trueHeading)
+        lblTrueNorthValue.text = String(format: "%.2f", trueHeading)
     }
 }
