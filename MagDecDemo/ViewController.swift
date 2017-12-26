@@ -16,6 +16,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var lblDeclValue: UILabel!
     @IBOutlet weak var lblDegValue: UILabel!
     @IBOutlet weak var lblCourseValue: UILabel!
+    @IBOutlet weak var lblTrueNorthValue: UILabel!
+    @IBOutlet weak var lblHeadingAccuracyValue: UILabel!
     
     
     
@@ -53,8 +55,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         print("starting")
         
-        self.locMgr.headingFilter = 1
+        // self.locMgr.headingFilter = 0.1
         self.locMgr.headingOrientation = .portrait
+        self.locMgr.headingFilter = kCLHeadingFilterNone
         self.updating = true
         
         self.locMgr.startUpdatingHeading()
@@ -113,6 +116,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     // heading
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
+        let headingAccuracy = newHeading.headingAccuracy
+        
+        lblHeadingAccuracyValue.text = String(format: "%.6f", headingAccuracy)
+        
         let currentHeading = newHeading.magneticHeading
         
         if let storedDecData = UserDefaults.standard.value(forKey:"decData") as? Data {
@@ -135,5 +142,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             lblDeclValue.text = "---"
         }
         
+        let trueHeading = newHeading.trueHeading
+
+        lblTrueNorthValue.text = String(format: "%.1f", trueHeading)
     }
 }

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VdT-ge-I81">
-                                <rect key="frame" x="131" y="225.5" width="113.5" height="216"/>
+                                <rect key="frame" x="131" y="181.5" width="113.5" height="304"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKm-hj-XNE">
                                         <rect key="frame" x="0.0" y="0.0" width="43" height="14.5"/>
@@ -65,14 +65,36 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="true north (iOS)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLr-PJ-JG1" userLabel="degrees">
+                                        <rect key="frame" x="0.0" y="176" width="89.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="true north val" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxP-Su-kuc" userLabel="degrees val">
+                                        <rect key="frame" x="0.0" y="194.5" width="108" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heading accuracy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTl-ht-b3R" userLabel="degrees">
+                                        <rect key="frame" x="0.0" y="220" width="100.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="accuracy val" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8t-ya-pAI" userLabel="degrees val">
+                                        <rect key="frame" x="0.0" y="238.5" width="101.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6Q-el-iFP" userLabel="degrees">
-                                        <rect key="frame" x="0.0" y="176" width="38.5" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="264" width="38.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="course val" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYn-36-jrd" userLabel="degrees val">
-                                        <rect key="frame" x="0.0" y="194.5" width="82.5" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="282.5" width="82.5" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -110,8 +132,10 @@
                         <outlet property="lblCourseValue" destination="zYn-36-jrd" id="T3h-A9-HnC"/>
                         <outlet property="lblDeclValue" destination="Tut-SI-NUR" id="rKd-c9-xbH"/>
                         <outlet property="lblDegValue" destination="4YF-sm-ukh" id="gMC-UU-LIl"/>
+                        <outlet property="lblHeadingAccuracyValue" destination="V8t-ya-pAI" id="vSU-VC-lhi"/>
                         <outlet property="lblLatValue" destination="cmi-2j-hzX" id="cV7-ML-Lqp"/>
                         <outlet property="lblLonValue" destination="LEx-bw-sH2" id="sqi-dZ-R4T"/>
+                        <outlet property="lblTrueNorthValue" destination="rxP-Su-kuc" id="EMo-Tq-iil"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
