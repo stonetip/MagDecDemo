@@ -55,9 +55,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         print("starting")
         
-        // self.locMgr.headingFilter = 0.1
+        self.locMgr.headingFilter = 0.25
         self.locMgr.headingOrientation = .portrait
-        self.locMgr.headingFilter = kCLHeadingFilterNone
+        //self.locMgr.headingFilter = kCLHeadingFilterNone
         self.updating = true
         
         self.locMgr.startUpdatingHeading()
